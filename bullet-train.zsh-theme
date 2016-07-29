@@ -322,7 +322,7 @@ prompt_segment() {
     echo -n "%{$bg%}%{$fg%} "
   fi
   CURRENT_BG=$1
-  [[ -n $3 ]] && echo -n $3
+  [[ -n $3 ]] && echo -n "${@:3}"
 }
 
 # End the prompt, closing any open segments
